@@ -39,7 +39,7 @@ class Navbar extends Component {
         var x = document.querySelectorAll(".sidebar-container");
 
         if (x[0].style.left === "0px") {
-            x[0].style.left = "-340px";
+            x[0].style.left = "-300px";
         } else {
             x[0].style.left = "0px"
         }
