@@ -1,0 +1,88 @@
+.merchant {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    min-width: 800px;
+
+    .merchant-pic {
+        width: 25%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .merchant-detail {
+        width: 75%;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-rows: 0.4fr 0.6fr;
+
+        .merchant-detail-grid-1 {
+            border-bottom: 1px solid rgb(212, 212, 212);
+            width: 65%;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: gray;
+        }
+
+        .name-and-status {
+            display: flex;
+            flex-direction: row;
+
+            .open, .close {
+                margin-left: 2rem;
+                width: 5rem;
+                // height: 2.5rem;
+                border-radius: 5px;
+                font-size: 1.5rem;
+
+                p {
+                    color: white;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+
+            .open {
+                background-color: rgb(25, 214, 25);
+            }
+
+            .close {
+                background-color: grey;
+            }
+        }
+    }
+}
+
+.merchant:not(:first-child) {
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .merchant {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+
+        .merchant-pic {
+            width: 100%;
+            height: 50%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

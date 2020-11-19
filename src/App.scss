@@ -1,0 +1,47 @@
+.root {
+    width: 100%;
+}
+.App {
+
+    .search-result {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    .search-result {
+        display: block;
+        padding-left: 1.5rem;
+    }
+}
+
+.sidebar-shoplist-container {
+    width: 98%;
+    display: grid;
+    grid-template-columns: 0.26fr 0.74fr;
+    grid-gap: 7rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .App {
+        width: 100%;
+        
+        .search-result {
+            width: 100%;
+        }
+    }
+
+    .sidebar-container {
+        display: none;
+    }
+
+    .shop-list-container {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

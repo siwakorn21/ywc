@@ -1,0 +1,78 @@
+import React, { Component } from 'react';
+import './SearchBox.scss';
+import { connect } from 'react-redux';
+import Action from '../actions';
+import icon from '../../asset/icons/placeholder.png';
+
+class SearchBox extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: this.props.data,
+            searchValue: ''
+        }
+    }
+
+    componentDidMount() {
+    }
+
+    handleChangeProvince(event) {
+        this.props.updateCurrentProvince(event.target.value);
+    }
+
+    listprovince() {
+        console.log(this.props.sidebarState)
+        var rows = [];
+        const provinces = this.state.data.provinces;
+        provinces.forEach(element => {
+            rows.push(
+                <option value={element}>{element}</option>
+            );
+        })
+
+        return (
+            <select value={(this.props.sidebarState).currentProvince} onChange={(e) => this.handleChangeProvince(e)} >
+                <option value='พื้นที่ใกล้ฉัน'>พื้นที่ใกล้ฉัน</option>
+                {rows}
+            </select>
+        );
+    }
+
+    handleChangeText(event) {
+        this.setState({searchValue: event.target.value});
+    } 
+
+
+    render() {
+        return (
+            <div className="search-box">
+                <div className="area-near-me">
+                    {this.listprovince()}
+                </div>
+                <div className="text-search">
+                    {/* <textarea name="search-area" id="" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป"></textarea> */}
+                    <form>
+                        {/* <label for="gsearch">ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป</label> */}
+                        <input type="search" id="shop-search" name="shop-search" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป" />
+                        <input type="submit" id="shop-submit"/>
+
+                    </form>
+                </div>
+                {/* <div className="submit-search-box">
+
+                </div> */}
+            </div>
+        );
+    }
+}
+
+const mapStateToProps = state => ({
+    sidebarState: state.sidebarState
+});
+
+const mapDispatchToProps = dispatch => ({
+    updateCurrentProvince: (payload) => dispatch({type: Action.UPDATE_CURRENT_PROVINCE, payload: payload}),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBox);
