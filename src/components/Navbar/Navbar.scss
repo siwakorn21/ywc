@@ -59,6 +59,10 @@
             padding-left: 3rem;
             display: flex;
         }
+
+        .mobile-menu {
+            display: none;
+        }
     }
 }
 
@@ -76,5 +80,36 @@
                 }
             }
         }
+        .search-bar-and-logo {
+
+            width: 94%;
+            
+            .logo-container {
+
+                width: 35%;
+
+                max-width: 90px;
+            }
+
+            .search-box-container {
+                padding-left: 1rem;
+            }
+
+            .mobile-menu {
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                margin-left: 1rem; 
+
+                .mobile-menu-btn {
+                    display: flex;
+                    border: 0;
+                    background-color: white;
+                    align-items: center;
+                }
+            }
+        }
    } 
+
+   
 }

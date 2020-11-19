@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Navbar.scss';
-import image from '../../asset/images/logo-KLK.png';
 import image1 from '../../asset/images/halfhalf.png';
 import image1mb from '../../asset/images/halfhalfmb.png';
 import SearchBox from '../SearchBox/SearchBox';
+import mobileMenuPic from '../../asset/images/mobileMenu.png';
 
 const breakpoint = 1024;
 
@@ -43,6 +43,9 @@ class Navbar extends Component {
                     </div>
                     <div className="search-box-container">
                         <SearchBox data={this.props.data} />
+                    </div>
+                    <div className="mobile-menu">
+                        <button className="mobile-menu-btn"><img src={mobileMenuPic} alt=""/></button>
                     </div>
                 </div>
                 <div className="page-navigation">

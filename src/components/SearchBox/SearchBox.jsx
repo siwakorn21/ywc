@@ -3,6 +3,10 @@ import './SearchBox.scss';
 import { connect } from 'react-redux';
 import Action from '../actions';
 import icon from '../../asset/icons/placeholder.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+const breakpoint = 1024;
 
 class SearchBox extends Component {
 
@@ -10,11 +14,27 @@ class SearchBox extends Component {
         super(props);
         this.state = {
             data: this.props.data,
-            searchValue: ''
+            searchValue: '',
+            width: window.innerWidth,
+            height: window.innerHeight
         }
+
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
     }
 
-    componentDidMount() {
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    componentDidUpdate() {
+        // console.log(this.state.width)
+    }
+
+    updateDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     handleChangeProvince(event) {
@@ -54,8 +74,12 @@ class SearchBox extends Component {
                     {/* <textarea name="search-area" id="" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป"></textarea> */}
                     <form>
                         {/* <label for="gsearch">ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป</label> */}
-                        <input type="search" id="shop-search" name="shop-search" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป" />
-                        <input type="submit" id="shop-submit"/>
+                        <input type="search" id="shop-search" name="shop-search" 
+                        placeholder={this.state.width > 1024 ? "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป" : "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ..."} />
+
+                        {/* <input type="submit" id="shop-submit"/> */}
+                        <button type="submit" id="shop-submit"><FontAwesomeIcon icon={faSearch} fontWeight="100"/></button>
+                        
 
                     </form>
                 </div>
