@@ -26,12 +26,23 @@ class Navbar extends Component {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(event) {
         // console.log(this.state.width)
+        console.log(event.target)
     }
 
     updateDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
+    mbMenuOnClick() {
+        var x = document.querySelectorAll(".sidebar-container");
+
+        if (x[0].style.left === "0px") {
+            x[0].style.left = "-340px";
+        } else {
+            x[0].style.left = "0px"
+        }
     }
 
     render() {
@@ -45,7 +56,7 @@ class Navbar extends Component {
                         <SearchBox data={this.props.data} />
                     </div>
                     <div className="mobile-menu">
-                        <button className="mobile-menu-btn"><img src={mobileMenuPic} alt=""/></button>
+                        <button className="mobile-menu-btn"><img src={mobileMenuPic} alt="" onClick={this.mbMenuOnClick} /></button>
                     </div>
                 </div>
                 <div className="page-navigation">

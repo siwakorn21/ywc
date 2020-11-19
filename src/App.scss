@@ -52,7 +52,55 @@
     }
 
     .sidebar-container {
-        display: none;
+        // display: none;
+        position: fixed;
+        z-index: 30;
+        background-color: white;
+        width: 340px;
+        top: 0%;
+        left: -340px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .sidebar {
+            padding: 0rem;
+            border: 0;
+            margin-left: 0.8rem;
+            span {
+                font-size: 1rem;
+            }
+
+            .shop-categories, .sub-categories {
+                form {
+
+                    font-size: 0.9rem;
+                }
+            }
+
+            .shop-categories {
+                margin-top: 2rem;
+            }
+
+            .sub-categories {
+                margin-top: 2rem;
+            }
+
+            .province, .price-range {
+                margin-top: 2rem;
+                form {
+
+                    select {
+                        font-size: 0.9rem;
+                        width: 75%;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-container-mb-clk {
+        left: 0px;
     }
 
     .shop-list-container {
