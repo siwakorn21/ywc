@@ -94,11 +94,11 @@ class Shop extends Component {
                                 <p>{this.showIsOpen()}</p>
                             </div>
                         </div>
-                        <p>{this.state.merchantDetail.subcategoryName} | {this.getPriceLevel()} | {this.getAddress()}</p>
+                        <p className="merchant-detail-text">{this.state.merchantDetail.subcategoryName} | {this.getPriceLevel()} | {this.getAddress()}</p>
                     </div>
                     <div className="merchant-detail-grid-2">
-                        <p>{this.fixHighlightTxt()}</p>
-                        <p>{this.getRecommendItems()}</p>
+                        <p className="merchant-detail-text">{this.fixHighlightTxt()}</p>
+                        <p className="merchant-detail-text">{this.getRecommendItems()}</p>
                     </div>
                 </div>
             </div>
