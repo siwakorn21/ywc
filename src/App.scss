@@ -29,9 +29,13 @@
 
     .App {
         width: 100%;
+
+        .navbar {
+            width: 238%;
+        }
         
         .search-result {
-            width: 100%;
+            width: 200%;
         }
     }
 
