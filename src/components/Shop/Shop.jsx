@@ -87,7 +87,9 @@ class Shop extends Component {
                 <div className="merchant-detail">
                     <div className="merchant-detail-grid-1">
                         <div className="name-and-status">
-                            <h3>{this.state.merchantDetail.shopNameTH}</h3>
+                            <div className="shop-name">
+                                <h3>{this.state.merchantDetail.shopNameTH}</h3>
+                            </div>
                             <div className={this.setClassIsOpen()}>
                                 <p>{this.showIsOpen()}</p>
                             </div>

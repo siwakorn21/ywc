@@ -31,7 +31,7 @@
         }
 
         p {
-            margin-top: 1rem;
+            // margin-top: 1rem;
             font-size: 1.3rem;
             color: gray;
         }
@@ -39,18 +39,23 @@
         .name-and-status {
             display: flex;
             flex-direction: row;
+            align-items: center;
 
             .open, .close {
-                margin-left: 2rem;
-                width: 5rem;
+                margin-left: 1rem;
+                width: 4.5rem;
+                height:2rem;
                 // height: 2.5rem;
                 border-radius: 5px;
                 font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 p {
                     color: white;
                     font-weight: bold;
-                    text-align: center;
+                    font-size: 1rem;
                 }
             }
 
