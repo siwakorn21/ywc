@@ -21,7 +21,7 @@
 .sidebar-shoplist-container {
     width: 98%;
     display: grid;
-    grid-template-columns: 0.26fr 0.74fr;
+    grid-template-columns: 0.26fr 0.73fr;
     grid-gap: 7rem;
     margin-top: 5rem;
     margin-left: auto;
@@ -62,7 +62,8 @@
 @media only screen and (min-width: 300px) and (max-width: 600px) {
 
     .App {
-        width: 305%;
+        width: 100%;
+        min-width: fit-content;
         .navbar {
         }
 
