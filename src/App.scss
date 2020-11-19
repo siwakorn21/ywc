@@ -3,6 +3,9 @@
 }
 .App {
 
+    width: 100%;
+    min-width: fit-content;
+
     .search-result {
         font-size: 2rem;
         font-weight: bold;
@@ -29,9 +32,10 @@
 
     .App {
         width: 100%;
+        min-width: fit-content;
 
         .navbar {
-            width: 238%;
+            width: 100%;
         }
         
         .search-result {
@@ -39,13 +43,28 @@
         }
     }
 
+    .sidebar-shoplist-container {
+        width: 100%;
+        display: flex;
+    }
+
     .sidebar-container {
         display: none;
     }
 
     .shop-list-container {
-        width: 98%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .App {
+        width: 305%;
+        .navbar {
+        }
+
     }
 }

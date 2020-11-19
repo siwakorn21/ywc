@@ -78,6 +78,7 @@
     .merchant {
         display: flex;
         flex-direction: column;
+        width: 100%;
         height: 700px;
 
         .merchant-pic {
@@ -89,5 +90,13 @@
                 object-fit: cover;
             }
         }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .merchant {
+        height: 1000px;
+        width: 100%;
     }
 }
