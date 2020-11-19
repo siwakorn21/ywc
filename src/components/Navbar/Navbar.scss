@@ -62,3 +62,19 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+
+   .navbar {
+        height: 125px;
+        .page-navigation {
+
+            .page-navigation-container {
+                width: 89%;
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+   } 
+}

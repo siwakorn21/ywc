@@ -1,10 +1,10 @@
 .merchant {
-    width: 100%;
+    width: 98%;
     height: 350px;
     display: flex;
     padding: 0.5rem;
     border: 1px solid gray;
-    min-width: 500px;
+    // min-width: 500px;
 
     .merchant-pic {
         width: 25%;
@@ -19,10 +19,12 @@
         width: 75%;
         padding-left: 2rem;
         padding-top: 1rem;
-        display: flex;
+        display: grid;
+        grid-template-rows: 0.4fr 0.6fr;
 
         .merchant-detail-grid-1 {
             border-bottom: 1px solid rgb(212, 212, 212);
+            padding-bottom: 1.2rem;
             width: 65%;
         }
         h3 {
@@ -73,12 +75,13 @@
     margin-top: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) and (min-width: 0px) {
     .merchant {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 700px;
+        // width: 100%;
+        height: 500px;
+        padding: 0;
 
         .merchant-pic {
             width: 100%;
@@ -86,8 +89,37 @@
 
             img {
                 width: 100%;
-                object-fit: cover;
+                // object-fit: cover;
             }
+        }
+
+        .merchant-detail {
+
+            padding-left: 1rem;
+
+            .merchant-detail-text {
+                font-size: 0.9rem;
+            }
+
+            .merchant-detail-grid-1 {
+                width: 100%;
+
+            }
+
+            .merchant-detail-grid-2  {
+
+            }
+        }
+
+        .name-and-status {
+            width: 100%;
+        }
+
+        .shop-name {
+            h3 {
+                font-size: 1.3rem;
+            }
+
         }
     }
 }
@@ -95,7 +127,6 @@
 @media only screen and (min-width: 300px) and (max-width: 600px) {
 
     .merchant {
-        height: 1000px;
-        width: 100%;
+        // width: 100%;
     }
 }

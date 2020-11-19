@@ -1,6 +1,3 @@
-.root {
-    width: 100%;
-}
 .App {
 
     width: 100%;
@@ -16,36 +13,42 @@
         display: block;
         padding-left: 1.5rem;
     }
+
+    .shop-list {
+        width: 100%;
+    }
 }
 
 .sidebar-shoplist-container {
     width: 98%;
     display: grid;
     grid-template-columns: 0.26fr 0.73fr;
-    grid-gap: 7rem;
+    grid-gap: 6rem;
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
 
     .App {
         width: 100%;
         min-width: fit-content;
 
-        .navbar {
-            width: 100%;
-        }
+        // .navbar {
+        //     width: 100%;
+        //     height: 100px;
+        // }
         
         .search-result {
-            width: 200%;
+            font-size: 1.2rem;
         }
     }
 
     .sidebar-shoplist-container {
         width: 100%;
         display: flex;
+        margin-top: 3rem;
     }
 
     .sidebar-container {
@@ -53,7 +56,7 @@
     }
 
     .shop-list-container {
-        width: 95%;
+        width: 91%;
         margin-left: auto;
         margin-right: auto;
     }
