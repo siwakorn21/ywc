@@ -2,6 +2,13 @@
 
     width: 100%;
     min-width: fit-content;
+    padding-bottom: 3rem;
+    background: linear-gradient(354deg, rgba(120,198,237,1) 0%, rgba(255,255,255,1) 57%);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
     .search-result {
         font-size: 2rem;
@@ -49,6 +56,7 @@
         width: 100%;
         display: flex;
         margin-top: 3rem;
+        margin-bottom: 2rem;
     }
 
     .sidebar-container {

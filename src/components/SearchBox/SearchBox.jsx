@@ -84,7 +84,6 @@ class SearchBox extends Component {
                     </form>
                 </div>
                 {/* <div className="submit-search-box">
-
                 </div> */}
             </div>
         );

@@ -3,17 +3,18 @@
     border: 1px solid gray;
     padding: 2rem;
     min-width: 200px;
+    background-color: white;
 
     // USE FOR HEADER SIDEBAR
     span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
 
     .shop-categories, .sub-categories {
 
         form {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         input[type=radio] {

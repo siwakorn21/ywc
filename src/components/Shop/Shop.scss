@@ -4,6 +4,7 @@
     display: flex;
     padding: 0.5rem;
     border: 1px solid gray;
+    background-color: white;
     // min-width: 500px;
 
     .merchant-pic {
@@ -26,6 +27,22 @@
             border-bottom: 1px solid rgb(212, 212, 212);
             padding-bottom: 1.2rem;
             width: 65%;
+        }
+
+        .merchant-detail-grid-2 {
+            color:  rgb(25, 214, 25);
+            font-size: 1.2rem;
+
+            svg {
+                border: 1px solid rgb(25, 214, 25);
+                border-radius: 100%;
+                padding: 0.6rem;
+                margin-top: 1rem;
+            }
+
+            svg:not(:first-child) {
+                margin-left: 0.5rem;
+            }
         }
         h3 {
             font-size: 2rem;

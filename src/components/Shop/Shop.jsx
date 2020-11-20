@@ -1,3 +1,5 @@
+import { faCar, faCarSide, faDog, faEdit, faParking } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { findByText } from '@testing-library/react';
 import React, { Component } from 'react';
 import './Shop.scss';
@@ -72,12 +74,36 @@ class Shop extends Component {
         if (recItems.length === 0) return;
 
         var showItems = '';
+        var i = 0;
         recItems.forEach(element => {
-            showItems += element + ' ';
+                showItems += element + ' ';
         });
         return <span><b style={{color: "black"}}>เมนูแนะนำ:</b> {showItems}</span>;
     }
 
+    MapNameToIcon(name) {
+        switch(name) {
+            case 'ที่จอดรถ': return <FontAwesomeIcon icon={faCarSide} />
+
+            case 'สามารถนำสัตว์เลี้ยงเข้าได้': return <FontAwesomeIcon icon={faDog} />
+
+            case 'รับจองล่วงหน้า' : return <FontAwesomeIcon icon={faEdit} />
+
+            default: return;
+        }
+    }
+
+    getFacilities() {
+        var rows = [];
+        const facilities = (this.state.merchantDetail).facilities;
+        facilities.forEach(element => {
+            rows.push(
+               this.MapNameToIcon(element) 
+            );
+        })
+
+        return rows;
+    }
     render() {
         return (
             <div className="merchant">
@@ -99,6 +125,9 @@ class Shop extends Component {
                     <div className="merchant-detail-grid-2">
                         <p className="merchant-detail-text">{this.fixHighlightTxt()}</p>
                         <p className="merchant-detail-text">{this.getRecommendItems()}</p>
+                        <div className="facilities">
+                            {this.getFacilities()}
+                        </div>
                     </div>
                 </div>
             </div>

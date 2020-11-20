@@ -9,7 +9,12 @@ margin:0;
 padding:0;
 width:100%;
 height:100%;
-overflow: auto;
+/* overflow: auto; */
+overflow-x: hidden;
+}
+
+html {
+  overflow-y: hidden;
 }
 
 #root {
@@ -17,6 +22,11 @@ overflow: auto;
   position: relative;
 }
 
+body {
+    /* background: rgb(120,198,237); */
+    
+    overflow-y: scroll;
+}
 /* body {
   margin: 0;
   padding: 0;
