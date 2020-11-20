@@ -1,4 +1,4 @@
-import { faCar, faCarSide, faDog, faEdit, faParking } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faCarSide, faDog, faEdit, faFileSignature, faParking } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { findByText } from '@testing-library/react';
 import React, { Component } from 'react';
@@ -87,7 +87,7 @@ class Shop extends Component {
 
             case 'สามารถนำสัตว์เลี้ยงเข้าได้': return <FontAwesomeIcon icon={faDog} />
 
-            case 'รับจองล่วงหน้า' : return <FontAwesomeIcon icon={faEdit} />
+            case 'รับจองล่วงหน้า' : return <FontAwesomeIcon icon={faFileSignature} />
 
             default: return;
         }

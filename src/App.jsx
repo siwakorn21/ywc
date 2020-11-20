@@ -31,6 +31,11 @@ class App extends Component {
                     </div>
                     <div className="shop-list-container">
                         <ShopList merchants={this.state.data.merchants}/>
+                        <div className="more-shop">
+                            <button className="more-shop-btn">
+                                <p>ดูเพิ่มเติม</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

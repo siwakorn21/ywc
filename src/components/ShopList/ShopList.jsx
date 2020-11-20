@@ -24,11 +24,7 @@ class ShopList extends Component {
         return (
             <div className="shop-list">
                 {this.renderShop()}
-                <div className="more-shop">
-                    <button className="more-shop-btn">
-                        <p>ดูเพิ่มเติม</p>
-                    </button>
-                </div>
+                
             </div>
         );
     }

@@ -3,6 +3,8 @@ import uuid from 'react-uuid';
 import './SideBar.scss';
 import { connect } from 'react-redux';
 import Action from '../actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 class SideBar extends Component {
 
@@ -13,10 +15,17 @@ class SideBar extends Component {
             // currentCategory: '',
             // currentProvince: '',
             // priceRange: '',
+            width: window.innerWidth,
+            height: window.innerHeight
 
         }
+
+        this.updateDimensions = this.updateDimensions.bind(this);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
 
     componentDidMount() {
         // console.log(this.state.data)
@@ -28,11 +37,16 @@ class SideBar extends Component {
         this.props.updateCurrentSubcategory( 'ทั้งหมด' )
         // console.log((this.props.sidebarState).currentCategory)
         // console.log(this.props.sidebarState)
+        window.addEventListener('resize', this.updateDimensions);
     }
 
     componentDidUpdate(prevProps) {
         // console.log(prevProps.sidebarState)
         // console.log(this.props.sidebarState)
+    }
+
+    updateDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     getIndexCategory(category) {
@@ -136,6 +150,16 @@ class SideBar extends Component {
         );
     }
 
+    handleChangeCloseBtn() {
+        var x = document.querySelectorAll(".sidebar-container");
+
+        if (x[0].style.width === "100%") {
+            x[0].style.left = "0%";
+        } else {
+            x[0].style.left = "100%"
+        }
+    }
+
     render() {
         return (
             <div className="sidebar">
@@ -163,7 +187,9 @@ class SideBar extends Component {
                         {this.getSubCategories()}
                     </form>
                 </div>
-                
+                <div className="close-btn" onClick={this.handleChangeCloseBtn}>
+                    <FontAwesomeIcon icon={faTimes} />
+                </div> 
             </div>
         );
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SearchBox.scss';
 import { connect } from 'react-redux';
 import Action from '../actions';
-import icon from '../../asset/icons/placeholder.png';
+import icon from '../../asset/icons/placeholder2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -69,13 +69,16 @@ class SearchBox extends Component {
             <div className="search-box">
                 <div className="area-near-me">
                     {this.listprovince()}
+                    {/* <img src={icon} alt=""/> */}
                 </div>
                 <div className="text-search">
                     {/* <textarea name="search-area" id="" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป"></textarea> */}
                     <form>
                         {/* <label for="gsearch">ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป</label> */}
-                        <input type="search" id="shop-search" name="shop-search" 
-                        placeholder={this.state.width > 1024 ? "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป" : "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ..."} />
+                        <div className="shop-search-container">
+                            <input type="search" id="shop-search" name="shop-search" 
+                            placeholder={this.state.width > 1024 ? "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป" : "ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ..."} />
+                        </div>
 
                         {/* <input type="submit" id="shop-submit"/> */}
                         <button type="submit" id="shop-submit"><FontAwesomeIcon icon={faSearch} fontWeight="100"/></button>
