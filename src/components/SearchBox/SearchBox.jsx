@@ -42,7 +42,7 @@ class SearchBox extends Component {
     }
 
     listprovince() {
-        console.log(this.props.sidebarState)
+        // console.log(this.props.sidebarState)
         var rows = [];
         const provinces = this.state.data.provinces;
         provinces.forEach(element => {
@@ -69,7 +69,7 @@ class SearchBox extends Component {
             <div className="search-box">
                 <div className="area-near-me">
                     {this.listprovince()}
-                    {/* <img src={icon} alt=""/> */}
+                    <img src={icon} alt=""/>
                 </div>
                 <div className="text-search">
                     {/* <textarea name="search-area" id="" placeholder="ค้นหาชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านุค้า OTOP และสินค้าทั่วไป"></textarea> */}

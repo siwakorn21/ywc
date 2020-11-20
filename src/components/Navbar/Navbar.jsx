@@ -28,7 +28,7 @@ class Navbar extends Component {
 
     componentDidUpdate(event) {
         // console.log(this.state.width)
-        console.log(event.target)
+        // console.log(event.target)
     }
 
     updateDimensions() {

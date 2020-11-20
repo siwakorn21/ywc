@@ -56,6 +56,33 @@
         }
     }
 
+    .price-range {
+
+        form {
+
+            select {
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    .province {
+
+        form {
+            position: relative;
+
+            select {
+                padding-left: 3rem;
+            }
+
+            img {
+                position: absolute;
+                top: 6%;
+                left: 2%;
+            }
+        }
+    }
+
     .close-btn {
         display: none;
     }

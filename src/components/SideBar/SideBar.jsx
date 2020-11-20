@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Action from '../actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import icon from '../../asset/icons/placeholder2.png';
 
 class SideBar extends Component {
 
@@ -173,6 +174,7 @@ class SideBar extends Component {
                     <span>จังหวัด/ใกล้ฉัน</span>
                     <form action="">
                         {this.listProvince()}
+                        <img src={icon} alt=""/>
                     </form>
                 </div>
                 <div className="price-range">
